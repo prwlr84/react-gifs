@@ -10,10 +10,15 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "zksCVmGcm9o2c"
+      selectedGifId: null
     }
 
     this.search();
+    this.selectGif();
+  }
+
+  selectGif = (event) => {
+
   }
 
   search = (query) => {
