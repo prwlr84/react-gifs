@@ -10,7 +10,7 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: null
+      selectedGifId: "3o7aCRYA3MjgqURBGE"
     }
 
     this.search();
@@ -18,7 +18,9 @@ class App extends Component {
   }
 
   selectGif = (event) => {
-
+    // this.setState({
+    //       selectedGifId: res.data
+    //     });
   }
 
   search = (query) => {
@@ -28,7 +30,6 @@ class App extends Component {
       rating: 'r',
       limit: 10
       }, (err,res) => {
-        console.log(res);
         this.setState({
           gifs: res.data
         });})

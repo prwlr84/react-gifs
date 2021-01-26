@@ -3,8 +3,8 @@ import Gif from './gif'
 
 class GifList extends Component {
 
-
   renderList = () => {
+    console.log(this.props.map()+ " awdfasdf");
     return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} />);
   }
 
