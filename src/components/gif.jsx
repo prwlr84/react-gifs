@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Gif extends Component {
   handleSelect = () => {
-    this.props.id.sendData()
+
   }
 
 
