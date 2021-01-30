@@ -10,10 +10,10 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "xT9IgDEI1iZyb2wqo8"
+      selectedGifId: null
     }
 
-    this.search();
+    this.searchFunc();
   }
 
   selectGif = (id) => {
@@ -22,7 +22,7 @@ class App extends Component {
     });
   }
 
-  search = (query) => {
+  searchFunc = (query) => {
     const gf = giphy('uJ7509Ni4ahDVeVhg7BNP1IaZMAhX41O');
     gf.search({
       q: query,
@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <div>
         <div className="leftS">
-          <SearchBar search={this.search} />
+          <SearchBar search={this.searchFunc} />
           <div className="selected-gif">
             <Gif id={this.state.selectedGifId}/>
           </div>
